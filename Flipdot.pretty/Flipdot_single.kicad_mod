@@ -66,6 +66,18 @@
 		(layer "F.Fab")
 		(uuid "23eca17b-7f96-4f25-9f35-58d9621f3057")
 	)
+	(fp_poly
+		(pts
+			(xy 1.615177 -10.807565) (xy 10.807565 -1.615177) (xy 8.544823 0.647565) (xy -0.647565 -8.544823)
+		)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "User.4")
+		(uuid "ba3fba72-8d2e-4313-b7d3-5a6feabf0832")
+	)
 	(fp_text user "${REFERENCE}"
 		(at 0 2.5 0)
 		(unlocked yes)
@@ -122,7 +134,7 @@
 		)
 		(polygon
 			(pts
-				(xy 1.5 -1.5) (xy 1.5 1.5) (xy 5 1.5) (xy 5 -1.5)
+				(xy 5.16 -11.66) (xy 5.16 -8.66) (xy 8.66 -8.66) (xy 8.66 -11.66)
 			)
 		)
 	)
