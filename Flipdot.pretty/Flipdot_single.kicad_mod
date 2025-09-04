@@ -121,7 +121,7 @@
 			(tracks allowed)
 			(vias allowed)
 			(pads not_allowed)
-			(copperpour allowed)
+			(copperpour not_allowed)
 			(footprints not_allowed)
 		)
 		(placement
