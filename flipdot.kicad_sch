@@ -1671,7 +1671,7 @@
 		)
 		(uuid "1a6e9642-11b5-4e29-99a6-174c5f8df171")
 	)
-	(text "LEDs on 12V, VCC and latch/en\npulldown on OE\nadd SMD 12v pads\n"
+	(text "LEDs on 12V, VCC and latch/en\npulldown on OE\n\n"
 		(exclude_from_sim no)
 		(at 182.118 125.476 0)
 		(effects
