@@ -2,8 +2,9 @@ all : flash
 
 TARGET:=spi
 
-CH32V003FUN:=../ch32v003fun/ch32v003fun
-include ../ch32v003fun/ch32v003fun/ch32v003fun.mk
+TARGET_MCU?=CH32V003
+CH32V003FUN:=../ch32fun/ch32fun
+include ../ch32fun/ch32fun/ch32fun.mk
 
 flash : cv_flash
 clean : cv_clean

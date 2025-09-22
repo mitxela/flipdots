@@ -1,4 +1,4 @@
-#include "ch32v003fun.h"
+#include "ch32fun.h"
 #include <stdio.h>
 
 // MOSI   PC6
@@ -28,6 +28,30 @@ void send_spi(uint8_t data) {
 	GPIOC->OUTDR |= OE;
 }
 
+void send_page(uint8_t * data){
+	GPIOC->OUTDR &= ~LATCH;
+	GPIOC->OUTDR |= OE;
+
+	for (int i=0;i<13;i++) {
+		// wait for TXE
+		while(!(SPI1->STATR & SPI_STATR_TXE));
+		// Send byte
+		SPI1->DATAR = data[i];
+		while(SPI1->STATR & SPI_STATR_BSY);
+	}
+
+	GPIOC->OUTDR |= LATCH;
+	GPIOC->OUTDR &= ~OE;
+	Delay_Us(5000);
+	GPIOC->OUTDR &= ~LATCH;
+	GPIOC->OUTDR |= OE;
+}
+
+const uint8_t p1[] = {0x55,0xAA,0x55,0xAA,0x55,0xAA,0x55,0xAA,0x55,0xAA,0x55,0xAA,0x55};
+const uint8_t p2[] = {0xAA,0x55,0xAA,0x55,0xAA,0x55,0xAA,0x55,0xAA,0x55,0xAA,0x55,0xAA};
+const uint8_t p3[] = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+const uint8_t p4[] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
+
 
 int main()
 {
@@ -46,17 +70,29 @@ int main()
 	SPI1->CTLR1 = 
 		SPI_NSS_Soft | SPI_CPHA_1Edge | SPI_CPOL_Low | SPI_DataSize_8b |
 		SPI_Mode_Master | SPI_Direction_1Line_Tx |
-		SPI_BaudRatePrescaler_32;
+		SPI_BaudRatePrescaler_8;
 
 	// enable SPI port
 	SPI1->CTLR1 |= CTLR1_SPE_Set;
 
 
 	while(1) {
-		Delay_Ms(500);
-		send_spi(0xF5);
-		Delay_Ms(500);
-		send_spi(0x0A);
+		Delay_Ms(300);
+		send_page(p1);
+		Delay_Ms(300);
+		send_page(p2);
+		Delay_Ms(300);
+		send_page(p1);
+		Delay_Ms(300);
+		send_page(p2);
+		Delay_Ms(300);
+		send_page(p3);
+		Delay_Ms(300);
+		send_page(p4);
+		Delay_Ms(300);
+		send_page(p3);
+		Delay_Ms(300);
+		send_page(p4);
 
 //		Delay_Ms(500);
 	}
