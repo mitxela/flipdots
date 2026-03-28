@@ -1382,10 +1382,6 @@
 		)
 		(uuid "083c819e-55a1-4d5a-96b3-cd4d0e317c6c")
 	)
-	(no_connect
-		(at 78.74 279.4)
-		(uuid "42cdebec-dd0f-4b28-95e7-77c325f52e94")
-	)
 	(wire
 		(pts
 			(xy 129.54 99.06) (xy 129.54 92.71)
@@ -1485,6 +1481,16 @@
 			(type default)
 		)
 		(uuid "1426c2c2-b39b-4cd9-8cb2-2d63c73b1bff")
+	)
+	(wire
+		(pts
+			(xy 78.74 279.4) (xy 146.05 279.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15983b34-a78c-4cff-8fda-511cae1aed25")
 	)
 	(wire
 		(pts
@@ -1698,6 +1704,16 @@
 	)
 	(wire
 		(pts
+			(xy 137.16 285.75) (xy 137.16 284.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64f714df-1fd4-4935-b682-05007d6dde1c")
+	)
+	(wire
+		(pts
 			(xy 167.64 127) (xy 167.64 132.08)
 		)
 		(stroke
@@ -1735,6 +1751,16 @@
 			(type default)
 		)
 		(uuid "72f84cd6-62e9-429a-af9d-9374896243f1")
+	)
+	(wire
+		(pts
+			(xy 133.35 276.86) (xy 146.05 276.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7592016a-b473-4731-bac8-8a3496cf51d5")
 	)
 	(wire
 		(pts
@@ -1828,6 +1854,16 @@
 	)
 	(wire
 		(pts
+			(xy 139.7 274.32) (xy 146.05 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a2ba1f1-28a6-4b6c-979e-673e62bcf295")
+	)
+	(wire
+		(pts
 			(xy 43.18 146.05) (xy 43.18 156.21)
 		)
 		(stroke
@@ -1835,6 +1871,16 @@
 			(type default)
 		)
 		(uuid "9a60d5b0-da03-4d94-9fa5-9bb79114726f")
+	)
+	(wire
+		(pts
+			(xy 133.35 281.94) (xy 146.05 281.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a90b964-6db7-4525-87ce-7b5a01bf4cfa")
 	)
 	(wire
 		(pts
@@ -2098,6 +2144,16 @@
 	)
 	(wire
 		(pts
+			(xy 137.16 284.48) (xy 146.05 284.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df0ea9a1-32ef-4e9e-992a-b5dbb29e56ae")
+	)
+	(wire
+		(pts
 			(xy 148.59 43.18) (xy 157.48 43.18)
 		)
 		(stroke
@@ -2310,6 +2366,30 @@
 	)
 	(global_label "OE*"
 		(shape input)
+		(at 133.35 276.86 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b6495978-4595-4f56-add7-667bd5fbf942")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 126.9177 276.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OE*"
+		(shape input)
 		(at 153.67 137.16 180)
 		(fields_autoplaced yes)
 		(effects
@@ -2353,6 +2433,30 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "CLK"
+		(shape input)
+		(at 139.7 274.32 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d75fd68c-83f5-4c6e-b46f-05267ecfd797")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 133.1467 274.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -3039,6 +3143,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "connector/JST"
+			(at 162.56 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "e51a1b5e-1ac7-4a80-9b01-6640ae11472c")
 		)
@@ -3058,6 +3173,108 @@
 			(project "flipdot"
 				(path "/2f7734fa-ef95-48ac-9211-21614044c9f8"
 					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x05_Pin")
+		(at 151.13 279.4 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6730ed2a-58d2-4966-a929-680929ea9db7")
+		(property "Reference" "J8"
+			(at 152.4 278.1299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Conn_01x05_Pin"
+			(at 152.4 280.6699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_ZH_B5B-ZR_1x05_P1.50mm_Vertical"
+			(at 151.13 279.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 279.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x05, script generated"
+			(at 151.13 279.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "connector/JST"
+			(at 151.13 279.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "67a20cac-018d-470f-998b-47990f3275e8")
+		)
+		(pin "2"
+			(uuid "a1abeba0-af20-48a5-a58a-703db7cc1d18")
+		)
+		(pin "3"
+			(uuid "71116e29-47eb-42cd-81c8-f5c9cf2b18de")
+		)
+		(pin "5"
+			(uuid "b9dfb396-7b77-483d-bee6-a66dc2dd45d4")
+		)
+		(pin "1"
+			(uuid "7aaa1565-c09e-439c-a919-69e9e60b4092")
+		)
+		(instances
+			(project "flipdot"
+				(path "/2f7734fa-ef95-48ac-9211-21614044c9f8"
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -3307,6 +3524,84 @@
 			(project "flipdot"
 				(path "/2f7734fa-ef95-48ac-9211-21614044c9f8"
 					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 137.16 285.75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "96983e85-a286-44dd-af1e-7e4d79dc2fdd")
+		(property "Reference" "#PWR0557"
+			(at 137.16 292.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 137.16 290.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 285.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 285.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 137.16 285.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9ef36ce9-40e4-44cc-86e3-369a5062c0a4")
+		)
+		(instances
+			(project "flipdot"
+				(path "/2f7734fa-ef95-48ac-9211-21614044c9f8"
+					(reference "#PWR0557")
 					(unit 1)
 				)
 			)
@@ -3695,6 +3990,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "package/gullwing"
+			(at 165.1 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b33ec6f0-d19b-4879-8870-cac0b5c1a149")
 		)
@@ -3786,6 +4092,85 @@
 			(project "flipdot"
 				(path "/2f7734fa-ef95-48ac-9211-21614044c9f8"
 					(reference "#PWR0554")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 133.35 281.94 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d313d1a4-d3dd-467c-a6d2-f4f3e1a48f31")
+		(property "Reference" "#PWR0556"
+			(at 137.16 281.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VCC"
+			(at 129.54 281.9399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 281.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 281.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 133.35 281.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c4886d6c-d7fa-4c52-8045-728ae850f3fd")
+		)
+		(instances
+			(project "flipdot"
+				(path "/2f7734fa-ef95-48ac-9211-21614044c9f8"
+					(reference "#PWR0556")
 					(unit 1)
 				)
 			)

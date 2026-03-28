@@ -12038,7 +12038,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 227.33 39.37 0)
 			(hide yes)
 			(show_name no)
