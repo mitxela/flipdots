@@ -7992,7 +7992,7 @@
 			(uuid "3880e702-ed9c-4351-ad49-45b6f0dc9b27")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SOP-16_3.9x9.9mm_P1.27mm.step"
+		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SO-16_3.9x9.9mm_P1.27mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -8865,7 +8865,7 @@
 			(uuid "b71b88a7-aa98-4589-8901-acb816f7c97a")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SOP-16_3.9x9.9mm_P1.27mm.step"
+		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SO-16_3.9x9.9mm_P1.27mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -15757,7 +15757,7 @@
 			(uuid "8c779717-a1f9-4a5f-91d3-5ffc07b65190")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SOP-16_3.9x9.9mm_P1.27mm.step"
+		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SO-16_3.9x9.9mm_P1.27mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -25785,7 +25785,7 @@
 			(uuid "cdc2f7b9-a93f-4ff0-b7ef-34ab96774985")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SOP-16_3.9x9.9mm_P1.27mm.step"
+		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SO-16_3.9x9.9mm_P1.27mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -38462,7 +38462,7 @@
 			(uuid "6dfb73a7-ff3f-4bff-a419-0b59f282f5ce")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SOP-16_3.9x9.9mm_P1.27mm.step"
+		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SO-16_3.9x9.9mm_P1.27mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -57710,7 +57710,7 @@
 			(uuid "e8ea3b99-ceb7-4693-adcc-9fb4f66617c6")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SOP-16_3.9x9.9mm_P1.27mm.step"
+		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SO-16_3.9x9.9mm_P1.27mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -124485,7 +124485,7 @@
 			(uuid "930be12b-b3ed-4822-b539-7da6972960b8")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SOP-16_3.9x9.9mm_P1.27mm.step"
+		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SO-16_3.9x9.9mm_P1.27mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -136007,7 +136007,7 @@
 			(uuid "4cd30ad4-0804-4957-97c7-d68c01cfd3d4")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SOP-16_3.9x9.9mm_P1.27mm.step"
+		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SO-16_3.9x9.9mm_P1.27mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -138278,7 +138278,7 @@
 			(uuid "b7c9227e-031b-4985-8237-f175ee142352")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SOP-16_3.9x9.9mm_P1.27mm.step"
+		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SO-16_3.9x9.9mm_P1.27mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -139306,7 +139306,7 @@
 			(uuid "3fd71d06-c6a8-47ff-83c9-4aa39b9c5373")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SOP-16_3.9x9.9mm_P1.27mm.step"
+		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SO-16_3.9x9.9mm_P1.27mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -144710,7 +144710,7 @@
 			(uuid "0c0b7246-076e-4abb-8b6e-cb6034b7c413")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SOP-16_3.9x9.9mm_P1.27mm.step"
+		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SO-16_3.9x9.9mm_P1.27mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -146116,7 +146116,7 @@
 			(uuid "eef2fdf9-ae15-41b1-a761-92dbc80103ca")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SOP-16_3.9x9.9mm_P1.27mm.step"
+		(model "${KICAD9_3DMODEL_DIR}/Package_SO.3dshapes/SO-16_3.9x9.9mm_P1.27mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
