@@ -5,7 +5,7 @@
 	(uuid "2f7734fa-ef95-48ac-9211-21614044c9f8")
 	(paper "A0")
 	(lib_symbols
-		(symbol "Connector:Conn_01x05_Pin"
+		(symbol "Connector:Conn_01x06_Pin"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -25,8 +25,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x05_Pin"
-				(at 0 -7.62 0)
+			(property "Value" "Conn_01x06_Pin"
+				(at 0 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -57,7 +57,7 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x05, script generated"
+			(property "Description" "Generic connector, single row, 01x06, script generated"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -100,7 +100,7 @@
 					)
 				)
 			)
-			(symbol "Conn_01x05_Pin_1_1"
+			(symbol "Conn_01x06_Pin_1_1"
 				(rectangle
 					(start 0.8636 5.207)
 					(end 0 4.953)
@@ -148,6 +148,17 @@
 				(rectangle
 					(start 0.8636 -4.953)
 					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -7.493)
+					(end 0 -7.747)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -207,6 +218,18 @@
 				(polyline
 					(pts
 						(xy 1.27 -5.08) (xy 0.8636 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -7.62) (xy 0.8636 -7.62)
 					)
 					(stroke
 						(width 0.1524)
@@ -299,6 +322,24 @@
 						)
 					)
 					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -7.62 180)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -796,6 +837,171 @@
 					(at 2.54 0 180)
 					(length 1.778)
 					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:Polyfuse_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "F"
+				(at -1.905 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Polyfuse_Small"
+				(at 1.905 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 1.27 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resettable fuse, polymeric positive temperature coefficient, small symbol"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "resettable fuse PTC PPTC polyfuse polyswitch"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "*polyfuse* *PTC*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Polyfuse_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.016 1.27) (xy -1.016 0.762) (xy 1.016 -0.762) (xy 1.016 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -0.508 1.27)
+					(end 0.508 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Polyfuse_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 0.635)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 0.635)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1749,6 +1955,10 @@
 		(color 0 0 0 0)
 		(uuid "ec0e4e66-09bc-47eb-9d40-0392eed3a56c")
 	)
+	(no_connect
+		(at 146.05 287.02)
+		(uuid "7ae4685b-7500-4a2f-9509-282b31873076")
+	)
 	(wire
 		(pts
 			(xy 129.54 99.06) (xy 129.54 92.71)
@@ -2061,6 +2271,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 45.72) (xy 134.62 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50ed6042-aff0-4282-9980-829a09ae70ca")
+	)
+	(wire
+		(pts
 			(xy 173.99 147.32) (xy 167.64 147.32)
 		)
 		(stroke
@@ -2218,6 +2438,16 @@
 			(type default)
 		)
 		(uuid "7ac68fcd-baa7-4320-9178-e0943f6e0a78")
+	)
+	(wire
+		(pts
+			(xy 139.7 45.72) (xy 157.48 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8191673f-5914-4bad-9473-4870366db098")
 	)
 	(wire
 		(pts
@@ -2618,16 +2848,6 @@
 			(type default)
 		)
 		(uuid "d4c997c1-a93a-4fdf-bb5d-5a1340eee916")
-	)
-	(wire
-		(pts
-			(xy 148.59 44.45) (xy 148.59 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6e88722-58df-40d3-8ca6-accb3aeb7cc3")
 	)
 	(wire
 		(pts
@@ -4520,8 +4740,88 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x05_Pin")
-		(at 162.56 38.1 180)
+		(lib_id "Device:Polyfuse_Small")
+		(at 137.16 45.72 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "470099ea-84c9-45b7-9aa6-44bea620a9d5")
+		(property "Reference" "F1"
+			(at 137.414 48.768 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "nSMD050-33V"
+			(at 137.414 51.308 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_1206_3216Metric"
+			(at 142.24 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resettable fuse, polymeric positive temperature coefficient, small symbol"
+			(at 137.16 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ac3bfd9d-0fef-4002-9e86-acbc10f04cf3")
+		)
+		(pin "1"
+			(uuid "02cb9c79-a305-4a30-b767-63cf0acc4fed")
+		)
+		(instances
+			(project "flipdot"
+				(path "/2f7734fa-ef95-48ac-9211-21614044c9f8"
+					(reference "F1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 132.08 45.72 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4530,31 +4830,31 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "4e526a05-a74e-4ac6-8ff6-18ca4caf656a")
-		(property "Reference" "J4"
-			(at 163.83 36.8299 0)
+		(uuid "4bf33e69-d484-438a-b26f-650632cc4e14")
+		(property "Reference" "#PWR0561"
+			(at 135.89 45.72 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "Conn_01x05_Pin"
-			(at 163.83 39.3699 0)
+		(property "Value" "+12V"
+			(at 128.27 45.7199 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_ZH_B5B-ZR_1x05_P1.50mm_Vertical"
-			(at 162.56 38.1 0)
+		(property "Footprint" ""
+			(at 132.08 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4565,7 +4865,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 38.1 0)
+			(at 132.08 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4575,8 +4875,87 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x05, script generated"
-			(at 162.56 38.1 0)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 132.08 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "37cb4fe3-085a-4652-8f60-50118ea0e403")
+		)
+		(instances
+			(project "flipdot"
+				(path "/2f7734fa-ef95-48ac-9211-21614044c9f8"
+					(reference "#PWR0561")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x06_Pin")
+		(at 162.56 40.64 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4e526a05-a74e-4ac6-8ff6-18ca4caf656a")
+		(property "Reference" "J4"
+			(at 163.83 38.0999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Conn_01x05_Pin"
+			(at 163.83 40.6399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_ZH_B6B-ZR_1x06_P1.50mm_Vertical"
+			(at 162.56 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated"
+			(at 162.56 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4587,7 +4966,7 @@
 			)
 		)
 		(property "KiLib_Generator" "connector/JST"
-			(at 162.56 38.1 0)
+			(at 162.56 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4611,6 +4990,9 @@
 		)
 		(pin "1"
 			(uuid "f91c35f1-9dbe-4ab7-9047-5a04f13a9055")
+		)
+		(pin "6"
+			(uuid "4cb999a0-9410-41ea-86a3-b86ddfbfb4a0")
 		)
 		(instances
 			(project "flipdot"
@@ -4701,8 +5083,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x05_Pin")
-		(at 151.13 279.4 180)
+		(lib_id "Connector:Conn_01x06_Pin")
+		(at 151.13 281.94 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4713,7 +5095,7 @@
 		(fields_autoplaced yes)
 		(uuid "6730ed2a-58d2-4966-a929-680929ea9db7")
 		(property "Reference" "J8"
-			(at 152.4 278.1299 0)
+			(at 152.4 279.3999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4724,7 +5106,7 @@
 			)
 		)
 		(property "Value" "Conn_01x05_Pin"
-			(at 152.4 280.6699 0)
+			(at 152.4 281.9399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4734,8 +5116,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_ZH_B5B-ZR_1x05_P1.50mm_Vertical"
-			(at 151.13 279.4 0)
+		(property "Footprint" "Connector_JST:JST_ZH_B6B-ZR_1x06_P1.50mm_Vertical"
+			(at 151.13 281.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4746,7 +5128,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 151.13 279.4 0)
+			(at 151.13 281.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4756,8 +5138,8 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x05, script generated"
-			(at 151.13 279.4 0)
+		(property "Description" "Generic connector, single row, 01x06, script generated"
+			(at 151.13 281.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4768,7 +5150,7 @@
 			)
 		)
 		(property "KiLib_Generator" "connector/JST"
-			(at 151.13 279.4 0)
+			(at 151.13 281.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4792,6 +5174,9 @@
 		)
 		(pin "1"
 			(uuid "7aaa1565-c09e-439c-a919-69e9e60b4092")
+		)
+		(pin "6"
+			(uuid "347a0262-e365-42b4-b712-a83cf84055fa")
 		)
 		(instances
 			(project "flipdot"
@@ -5700,7 +6085,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 148.59 44.45 0)
+		(at 148.59 43.18 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5708,10 +6093,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c02834a1-6128-4c9a-8f38-d083229ab89c")
 		(property "Reference" "#PWR0554"
-			(at 148.59 50.8 0)
+			(at 142.24 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5722,7 +6106,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 148.59 49.53 0)
+			(at 142.748 43.434 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5732,7 +6116,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 148.59 44.45 0)
+			(at 148.59 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5743,7 +6127,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 148.59 44.45 0)
+			(at 148.59 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5754,7 +6138,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 148.59 44.45 0)
+			(at 148.59 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
