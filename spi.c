@@ -23,10 +23,8 @@ void send_spi(uint8_t data) {
 	while(SPI1->STATR & SPI_STATR_BSY);
 
 	GPIOC->OUTDR &= ~OE;
-	GPIOC->OUTDR |= LATCH;
 	Delay_Us(pulseLength);
 	GPIOC->OUTDR |= OE;
-	GPIOC->OUTDR &= ~LATCH;
 }
 
 void send_page(uint8_t * data){
@@ -44,10 +42,8 @@ void send_page(uint8_t * data){
 	}
 
 	GPIOC->OUTDR &= ~OE;
-	GPIOC->OUTDR |= LATCH;
 	Delay_Us(pulseLength);
 	GPIOC->OUTDR |= OE;
-	GPIOC->OUTDR &= ~LATCH;
 
 
 //	Delay_Us(pulseLength);
@@ -58,6 +54,15 @@ void send_page(uint8_t * data){
 //	GPIOC->OUTDR &= ~OE;
 //	Delay_Us(pulseLength*4);
 //	GPIOC->OUTDR |= OE;
+}
+
+void repulse_delay(int d, int s){
+	for (int i=0;i<d;i+=s) {
+		Delay_Ms(s);
+		GPIOC->OUTDR &= ~OE;
+		Delay_Us(pulseLength);
+		GPIOC->OUTDR |= OE;
+	}
 }
 
 const uint8_t p1[] = {
@@ -127,19 +132,19 @@ int main()
 		Delay_Ms(300);
 
 		send_page(p3);
-		Delay_Ms(tempdelay);
+		repulse_delay(tempdelay, 50);
 		send_page(p4);
-		Delay_Ms(tempdelay);
+		repulse_delay(tempdelay, 50);
 
 		send_page(p3);
-		Delay_Ms(tempdelay);
+		repulse_delay(tempdelay, 50);
 		send_page(p4);
-		Delay_Ms(tempdelay);
+		repulse_delay(tempdelay, 50);
 
 		send_page(p3);
-		Delay_Ms(tempdelay);
+		repulse_delay(tempdelay, 50);
 		send_page(p4);
-		Delay_Ms(tempdelay);
+		repulse_delay(tempdelay, 50);
 
 
 //		Delay_Ms(500);
