@@ -95,6 +95,8 @@ int main()
 	USART1->CTLR1 |= CTLR1_UE_Set;
 
 
+	GPIOC->OUTDR |= OE;
+
 	const frame = 1;
 
 
