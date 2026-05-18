@@ -2357,16 +2357,6 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 88.9) (xy 203.2 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3d42b1ea-bc41-4072-8175-7b875b022bf9")
-	)
-	(wire
-		(pts
 			(xy 85.09 198.12) (xy 85.09 208.28)
 		)
 		(stroke
@@ -2897,16 +2887,6 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 96.52) (xy 175.26 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b4272144-31b7-45d4-a7fb-cc789cf2e483")
-	)
-	(wire
-		(pts
 			(xy 113.03 38.1) (xy 157.48 38.1)
 		)
 		(stroke
@@ -2987,16 +2967,6 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 88.9) (xy 175.26 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd7a67e8-2aa4-4188-b166-aa0c46d6dc59")
-	)
-	(wire
-		(pts
 			(xy 43.18 238.76) (xy 48.26 238.76)
 		)
 		(stroke
@@ -3014,16 +2984,6 @@
 			(type default)
 		)
 		(uuid "d4acd518-3528-4366-bd18-3e22363dc736")
-	)
-	(wire
-		(pts
-			(xy 203.2 81.28) (xy 203.2 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d4c997c1-a93a-4fdf-bb5d-5a1340eee916")
 	)
 	(wire
 		(pts
@@ -3094,16 +3054,6 @@
 			(type default)
 		)
 		(uuid "e474d645-2c03-477b-be03-bd6e1156b31f")
-	)
-	(wire
-		(pts
-			(xy 175.26 81.28) (xy 175.26 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e7b1c649-5c3d-4537-af63-8804b63af4d9")
 	)
 	(wire
 		(pts
@@ -3197,16 +3147,6 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 95.25) (xy 203.2 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fcb84d0a-fb3d-4a9e-96d1-94c05e0b6bfc")
-	)
-	(wire
-		(pts
 			(xy 43.18 54.61) (xy 48.26 54.61)
 		)
 		(stroke
@@ -3246,30 +3186,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-	)
-	(global_label "OE*"
-		(shape input)
-		(at 175.26 101.6 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "247a3859-df24-48f1-8044-8071ac58c9b7")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 181.6923 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 	)
@@ -3941,181 +3857,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_Small")
-		(at 203.2 92.71 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "135cf5d3-1d54-496d-bc70-2c3414f90b9a")
-		(property "Reference" "D3"
-			(at 205.74 91.3764 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Red"
-			(at 205.74 93.9164 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 203.2 92.71 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 203.2 92.71 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Light emitting diode, small symbol"
-			(at 203.2 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pin" "1=K 2=A"
-			(at 203.2 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "16255b70-1779-4b3a-8c8d-689d81279f51")
-		)
-		(pin "1"
-			(uuid "e552adb9-db79-4b4a-83b7-4de82f006dc0")
-		)
-		(instances
-			(project "flipdot"
-				(path "/2f7734fa-ef95-48ac-9211-21614044c9f8"
-					(reference "D3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 203.2 86.36 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "14c3bc30-77ec-4a71-8f00-2179e4e2a0bc")
-		(property "Reference" "R4"
-			(at 205.74 85.0899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100K"
-			(at 205.74 87.6299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 203.2 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 203.2 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 203.2 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f429dee6-e430-41e8-91ee-258fb5568bd6")
-		)
-		(pin "2"
-			(uuid "f9e88e99-2933-4137-a210-1b23f1ba699a")
-		)
-		(instances
-			(project "flipdot"
-				(path "/2f7734fa-ef95-48ac-9211-21614044c9f8"
-					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 90.17 24.13 0)
 		(unit 1)
@@ -4679,166 +4420,6 @@
 			(project "flipdot"
 				(path "/2f7734fa-ef95-48ac-9211-21614044c9f8"
 					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 175.26 81.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3fce5632-3910-4909-9d03-b819963fcdb5")
-		(property "Reference" "#PWR0550"
-			(at 175.26 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC"
-			(at 175.26 76.2 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 175.26 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 175.26 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 175.26 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "70243dc6-8ba3-4eac-857f-ff9d242a7d5c")
-		)
-		(instances
-			(project "flipdot"
-				(path "/2f7734fa-ef95-48ac-9211-21614044c9f8"
-					(reference "#PWR0550")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 175.26 86.36 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "40fce555-f096-4488-acbd-c8a304cd352d")
-		(property "Reference" "R3"
-			(at 177.8 85.0899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100K"
-			(at 177.8 87.6299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 175.26 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 175.26 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 175.26 86.36 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b135cc25-9141-4b3b-9cec-d2ee29eb55e2")
-		)
-		(pin "2"
-			(uuid "0c8f5e04-3a50-40d3-bec1-ab9dcd9647f2")
-		)
-		(instances
-			(project "flipdot"
-				(path "/2f7734fa-ef95-48ac-9211-21614044c9f8"
-					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -5452,84 +5033,6 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 203.2 81.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "68e66c81-6e50-4410-a55a-bd57436dd0ac")
-		(property "Reference" "#PWR0551"
-			(at 203.2 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC"
-			(at 203.2 76.2 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 203.2 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 203.2 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 203.2 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6c2c0118-bf3b-45cb-8201-47d9d4a68849")
-		)
-		(instances
-			(project "flipdot"
-				(path "/2f7734fa-ef95-48ac-9211-21614044c9f8"
-					(reference "#PWR0551")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
 		(at 129.54 85.09 0)
 		(unit 1)
 		(body_style 1)
@@ -5768,99 +5271,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_Small")
-		(at 175.26 93.98 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "903f4b9e-4be9-414d-8c5a-682f64c7dbc7")
-		(property "Reference" "D2"
-			(at 177.8 92.6464 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Green"
-			(at 177.8 95.1864 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 175.26 93.98 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 175.26 93.98 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Light emitting diode, small symbol"
-			(at 175.26 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pin" "1=K 2=A"
-			(at 175.26 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "de8ccfe5-71fd-41d8-a80d-8a094ea6c673")
-		)
-		(pin "1"
-			(uuid "3ec24b7f-c271-465f-ba50-ec114fd32f22")
-		)
-		(instances
-			(project "flipdot"
-				(path "/2f7734fa-ef95-48ac-9211-21614044c9f8"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 137.16 285.75 0)
 		(unit 1)
@@ -6090,84 +5500,6 @@
 			(project "flipdot"
 				(path "/2f7734fa-ef95-48ac-9211-21614044c9f8"
 					(reference "#PWR0548")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 203.2 99.06 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a4fe926b-0ac9-4781-abe0-b3110af01b67")
-		(property "Reference" "#PWR0552"
-			(at 203.2 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 203.2 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 203.2 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 203.2 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 203.2 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "330ae22e-ffbb-4fa5-99a1-481ae7d5f774")
-		)
-		(instances
-			(project "flipdot"
-				(path "/2f7734fa-ef95-48ac-9211-21614044c9f8"
-					(reference "#PWR0552")
 					(unit 1)
 				)
 			)
