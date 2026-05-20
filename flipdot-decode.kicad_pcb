@@ -122,9 +122,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "output/")
 		)
 	)
 	(footprint "Button_Switch_THT:SW_DIP_SPSTx05_Slide_9.78x14.88mm_W7.62mm_P2.54mm"
@@ -1491,12 +1491,11 @@
 		)
 		(property "Value" "470K"
 			(at 0 1.43 0)
-			(layer "F.Fab")
+			(layer "F.SilkS")
 			(uuid "3f848346-511b-4961-8961-7232db9a8b31")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.8 0.8)
 				)
 			)
 		)
@@ -2475,12 +2474,11 @@
 		)
 		(property "Value" "150K"
 			(at 0 1.43 0)
-			(layer "F.Fab")
+			(layer "F.SilkS")
 			(uuid "ca61184e-6a46-4b3d-9541-587de9e39de2")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.8 0.8)
 				)
 			)
 		)
