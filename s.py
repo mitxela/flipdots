@@ -1,5 +1,5 @@
 import serial, time
-s=serial.Serial("/dev/ttyACM0",500000)
+s=serial.Serial("/dev/ttyUSB0",1000000)
 
 totalFrames = 2;
 

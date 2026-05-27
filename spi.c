@@ -72,11 +72,23 @@ int main()
 
 	RCC->APB2PCENR |= RCC_APB2Periph_GPIOC | RCC_APB2Periph_SPI1 | RCC_APB2Periph_GPIOD | RCC_APB2Periph_USART1;
 
-	GPIOC->CFGLR &= ~((0xf<<(4*6)) | (0xf<<(4*5)) | (0xf<<(4*2)) | (0xf<<(4*1)));
+	GPIOC->CFGLR &= ~((0xf<<(4*6)) | (0xf<<(4*5)) | (0xf<<(4*2)) );
 	GPIOC->CFGLR |=((GPIO_Speed_10MHz | GPIO_CNF_OUT_PP_AF)<<(4*5))
 				 | ((GPIO_Speed_10MHz | GPIO_CNF_OUT_PP_AF)<<(4*6))
-				 | ((GPIO_Speed_10MHz | GPIO_CNF_OUT_PP)<<(4*2))
-				 | ((GPIO_Speed_10MHz | GPIO_CNF_OUT_PP)<<(4*1));
+				 | ((GPIO_Speed_10MHz | GPIO_CNF_OUT_PP)<<(4*2));
+
+	// ID pins on D0,D2,D3,D4,D5
+	GPIOD->CFGLR &= ~((0xf<<(4*0)) | (0xf<<(4*2)) | (0xf<<(4*3)) | (0xf<<(4*4)) | (0xf<<(4*5)) );
+	GPIOD->CFGLR |=((GPIO_Speed_In | GPIO_CNF_IN_PUPD)<<(4*0))
+				 | ((GPIO_Speed_In | GPIO_CNF_IN_PUPD)<<(4*2))
+				 | ((GPIO_Speed_In | GPIO_CNF_IN_PUPD)<<(4*3))
+				 | ((GPIO_Speed_In | GPIO_CNF_IN_PUPD)<<(4*4))
+				 | ((GPIO_Speed_In | GPIO_CNF_IN_PUPD)<<(4*5));
+	GPIOD->BSHR = GPIO_BSHR_BS0 |
+				  GPIO_BSHR_BS2 |
+				  GPIO_BSHR_BS3 |
+				  GPIO_BSHR_BS4 |
+				  GPIO_BSHR_BS5;
 
 	// Configure SPI 
 	SPI1->CTLR1 = 
@@ -91,13 +103,13 @@ int main()
 	USART1->CTLR1 = USART_WordLength_8b | USART_Parity_No | USART_Mode_Rx;
 	USART1->CTLR2 = USART_StopBits_1;
 	USART1->CTLR3 = USART_HardwareFlowControl_None;
-	USART1->BRR = 96; // 500kbps
+	USART1->BRR = 48; // 1000kbps
 	USART1->CTLR1 |= CTLR1_UE_Set;
 
 
 	GPIOC->OUTDR |= OE;
 
-	const frame = 1;
+	int frame = ((GPIOD->INDR) &1) | (((GPIOD->INDR) >>1)&0b11110);
 
 
 	sync:
