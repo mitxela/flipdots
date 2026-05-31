@@ -38,6 +38,7 @@ void send_spi(uint8_t data) {
 }
 
 void send_page(uint8_t * data){
+	adc_start();
 
 	for (int i=0;i<13*4;i++) {
 		// wait for TXE
@@ -46,6 +47,9 @@ void send_page(uint8_t * data){
 		SPI1->DATAR = data[i];
 		while(SPI1->STATR & SPI_STATR_BSY);
 	}
+
+	// best time to check battery is right before a pulse
+	if (!check_vbat()) return;
 
 	GPIOC->OUTDR &= ~OE;
 	Delay_Us(pulseLength);
@@ -62,6 +66,50 @@ void repulse_delay(int d, int s){
 	}
 }
 
+void init_adc()
+{
+	RCC->APB2PCENR |= RCC_APB2Periph_GPIOA | RCC_APB2Periph_ADC1;
+
+	// PA1 is analog input chl 1
+	GPIOA->CFGLR &= ~(0xf<<(4*1));	// CNF = 00: Analog, MODE = 00: Input
+
+	RCC->APB2PRSTR |= RCC_APB2Periph_ADC1;
+	RCC->APB2PRSTR &= ~RCC_APB2Periph_ADC1;
+
+	RCC->CFGR0 &= ~(0x1F<<11); //RCC_ADCPRE = 0
+	ADC1->RSQR1 = 0;
+	ADC1->RSQR2 = 0;
+	ADC1->RSQR3 = 1;
+	// sampling time
+	ADC1->SAMPTR2 &= ~(ADC_SMP0<<(3*7));
+	ADC1->SAMPTR2 |= 7<<(3*7);
+
+	// turn on, set sw trig
+	ADC1->CTLR2 |= ADC_ADON | ADC_EXTSEL;
+	// reset calibration
+	ADC1->CTLR2 |= ADC_RSTCAL;
+	while(ADC1->CTLR2 & ADC_RSTCAL);
+	// calibrate
+	ADC1->CTLR2 |= ADC_CAL;
+	while(ADC1->CTLR2 & ADC_CAL);
+}
+
+static inline uint16_t adc_start(void)
+{
+	ADC1->CTLR2 |= ADC_SWSTART;
+}
+
+static inline bool check_vbat(){
+
+	while(!(ADC1->STATR & ADC_EOC));
+	uint16_t r = ADC1->RDATAR;//[0...1023]
+
+// 150/(470+150) = 0.242
+// 3S lipo, cut out at 9.0V
+// 9.0*150/(470+150) *1023/3.3 = 675 
+
+	return ( r > 675 );
+}
 
 uint8_t page[PAGESIZE] = {};
 
@@ -135,37 +183,7 @@ int main()
 	if (uart_rx() !='\n') goto sync; // maybe between each frame too?
 
 	send_page(page);
+
 	goto sync;
 
-
-	while(1) {
-
-/*
-		send_page(p1);
-		Delay_Ms(300);
-		send_page(p2);
-		Delay_Ms(300);
-		send_page(p1);
-		Delay_Ms(300);
-		send_page(p2);
-		Delay_Ms(300);
-
-		send_page(p3);
-		repulse_delay(tempdelay, 50);
-		send_page(p4);
-		repulse_delay(tempdelay, 50);
-
-		send_page(p3);
-		repulse_delay(tempdelay, 50);
-		send_page(p4);
-		repulse_delay(tempdelay, 50);
-
-		send_page(p3);
-		repulse_delay(tempdelay, 50);
-		send_page(p4);
-		repulse_delay(tempdelay, 50);
-*/
-
-//		Delay_Ms(500);
-	}
 }
