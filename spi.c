@@ -3,12 +3,12 @@
 
 // MOSI   PC6
 // SCK    PC5
-// LATCH  PC1
 // OE/LATCH* PC2
 
 // UART RX PD6
+// LED  PC1
 
-#define LATCH (1<<1)
+#define LED (1<<1)
 #define OE (1<<2)
 
 #define PAGESIZE (13*4)
@@ -16,6 +16,20 @@
 #define pulseLength 2000
 #define tempdelay 500
 
+
+
+// 150/(470+150) = 0.242
+// 3S lipo, cut out at 9.0V
+// 9.0*150/(470+150) *1023/3.3 = 675 
+
+#define VBAT_LOW       650 // ~9.0
+#define VBAT_RELEASE   700 // ~9.6
+
+static inline uint16_t read_adc(){
+	ADC1->CTLR2 |= ADC_SWSTART;
+	while(!(ADC1->STATR & ADC_EOC));
+	return ADC1->RDATAR;//[0...1023]
+}
 
 uint8_t uart_rx(){
 	while (!(USART1->STATR & USART_STATR_RXNE));
@@ -38,7 +52,7 @@ void send_spi(uint8_t data) {
 }
 
 void send_page(uint8_t * data){
-	adc_start();
+	GPIOC->OUTDR &= ~LED;
 
 	for (int i=0;i<13*4;i++) {
 		// wait for TXE
@@ -49,12 +63,20 @@ void send_page(uint8_t * data){
 	}
 
 	// best time to check battery is right before a pulse
-	if (!check_vbat()) return;
-
-	GPIOC->OUTDR &= ~OE;
-	Delay_Us(pulseLength);
-	GPIOC->OUTDR |= OE;
-
+	if (read_adc() < VBAT_LOW ) {
+		do {
+			Delay_Ms(500);
+			GPIOC->OUTDR |= LED;
+			Delay_Ms(500);
+			GPIOC->OUTDR &= ~LED;
+			//printf("adc %d\n",read_adc());
+		} while (read_adc()<VBAT_RELEASE);
+	} else {
+		GPIOC->OUTDR &= ~OE;
+		Delay_Us(pulseLength);
+		GPIOC->OUTDR |= OE;
+	}
+	GPIOC->OUTDR |= LED;
 }
 
 void repulse_delay(int d, int s){
@@ -94,23 +116,6 @@ void init_adc()
 	while(ADC1->CTLR2 & ADC_CAL);
 }
 
-static inline uint16_t adc_start(void)
-{
-	ADC1->CTLR2 |= ADC_SWSTART;
-}
-
-static inline bool check_vbat(){
-
-	while(!(ADC1->STATR & ADC_EOC));
-	uint16_t r = ADC1->RDATAR;//[0...1023]
-
-// 150/(470+150) = 0.242
-// 3S lipo, cut out at 9.0V
-// 9.0*150/(470+150) *1023/3.3 = 675 
-
-	return ( r > 675 );
-}
-
 uint8_t page[PAGESIZE] = {};
 
 int main()
@@ -120,10 +125,13 @@ int main()
 
 	RCC->APB2PCENR |= RCC_APB2Periph_GPIOC | RCC_APB2Periph_SPI1 | RCC_APB2Periph_GPIOD | RCC_APB2Periph_USART1;
 
-	GPIOC->CFGLR &= ~((0xf<<(4*6)) | (0xf<<(4*5)) | (0xf<<(4*2)) );
+	GPIOC->CFGLR &= ~((0xf<<(4*6)) | (0xf<<(4*5)) | (0xf<<(4*2)) | (0xf<<(4*1)) );
 	GPIOC->CFGLR |=((GPIO_Speed_10MHz | GPIO_CNF_OUT_PP_AF)<<(4*5))
 				 | ((GPIO_Speed_10MHz | GPIO_CNF_OUT_PP_AF)<<(4*6))
+				 | ((GPIO_Speed_10MHz | GPIO_CNF_OUT_PP)<<(4*1))
 				 | ((GPIO_Speed_10MHz | GPIO_CNF_OUT_PP)<<(4*2));
+
+	GPIOC->OUTDR |= OE;
 
 	// ID pins on D0,D2,D3,D4,D5
 	GPIOD->CFGLR &= ~((0xf<<(4*0)) | (0xf<<(4*2)) | (0xf<<(4*3)) | (0xf<<(4*4)) | (0xf<<(4*5)) );
@@ -154,8 +162,9 @@ int main()
 	USART1->BRR = 48; // 1000kbps
 	USART1->CTLR1 |= CTLR1_UE_Set;
 
+	init_adc();
 
-	GPIOC->OUTDR |= OE;
+	GPIOC->OUTDR |= LED;
 
 	int frame = ((GPIOD->INDR) &1) | (((GPIOD->INDR) >>1)&0b11110);
 
