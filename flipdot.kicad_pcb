@@ -149891,6 +149891,39 @@
 		(layer "Edge.Cuts")
 		(uuid "f8436c6c-49ef-4442-8234-670a69b2ad3a")
 	)
+	(gr_rect
+		(start -13.5 -18)
+		(end 128 17.6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill hatch)
+		(layer "User.2")
+		(uuid "cf278076-efcf-46b7-a08e-3a97e1caa12c")
+	)
+	(gr_rect
+		(start 45.123509 144.103059)
+		(end 67.876491 156.896942)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill hatch)
+		(layer "User.2")
+		(uuid "a5e75ed5-db5b-4a9d-9005-a1bfd72bb803")
+	)
+	(gr_rect
+		(start 45.5 37)
+		(end 68.252982 49.793883)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill hatch)
+		(layer "User.2")
+		(uuid "2e20836a-fd01-40b6-9e02-eb41cad1c2d3")
+	)
 	(gr_text "0V"
 		(at 5.3 15.24 0)
 		(layer "F.SilkS")
@@ -150479,7 +150512,7 @@
 			)
 		)
 	)
-	(gr_text "2026-03-29"
+	(gr_text "2026-05-18"
 		(at 58.58 39.9 90)
 		(layer "F.SilkS")
 		(uuid "b23258e3-54ff-433b-9a1a-0647ec338262")
@@ -150489,6 +150522,42 @@
 				(thickness 0.3)
 				(bold yes)
 			)
+		)
+	)
+	(gr_text "Plywood frame"
+		(at 128.5 17.5 0)
+		(layer "User.2")
+		(uuid "1d57fb45-ba2f-4818-83c1-9fc9958365a6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left)
+		)
+	)
+	(gr_text "big electrolytics"
+		(at 129 43 0)
+		(layer "User.2")
+		(uuid "d8cc34ff-55a8-45ad-9caa-41206c5b9edb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left)
+		)
+	)
+	(gr_text "big electrolytics"
+		(at 129 150.5 0)
+		(layer "User.2")
+		(uuid "f39b4b0c-d32b-46b7-8a58-f6187a0bebef")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left)
 		)
 	)
 	(segment
