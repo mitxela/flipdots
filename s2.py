@@ -30,7 +30,7 @@ def image2page(b):
 	return bytes(page)
 
 
-s=serial.Serial("/dev/ttyACM0",500000)
+s=serial.Serial("/dev/ttyUSB0",1000000)
 a=0.0
 while True:
 	a = a+ 0.2
