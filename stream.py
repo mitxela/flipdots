@@ -3,8 +3,8 @@ from PIL import Image, ImageDraw, ImageOps
 import sys, serial, time
 
 if len(sys.argv) == 3:
-	fullscreen = 1 sys.argv[1]=='1' else 0
-	dither = 0 sys.argv[2]=='1' else 0
+	fullscreen = 1 if sys.argv[1]=='1' else 0
+	dither = 1 if sys.argv[2]=='1' else 0
 else:
 	print("Usage: ",sys.argv[0],"fullscreen dither")
 	exit()
