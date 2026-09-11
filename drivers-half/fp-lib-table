@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Flipdot")(type "KiCad")(uri "${KIPRJMOD}/Flipdot.pretty")(options "")(descr ""))
+)
